@@ -2,6 +2,7 @@
 <h1 class="text-center">This is Image Genration Class</h1>
 
 <h1>Your Generated Image</h1>
+<a href="{% url 'homepage' %}">Want to Gererate Another Image</a>
 <img src="{% static generated_image_path %}" alt="Generated Image" />
 <br />
 <form action="{% url 'download_image' %}" method="get">

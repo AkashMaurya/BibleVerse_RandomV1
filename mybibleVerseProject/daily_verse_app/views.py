@@ -117,7 +117,7 @@ def HomePage(request):
 def generate_image(request):
     try:
         book_name, chapter, verse, text = fetch_api_bible_verse()
-        verse_text = f"{text}\n{book_name} {chapter}:{verse}"
+        verse_text = f"{text}\n\n{book_name} {chapter}:{verse}"
         
         image_url = fetch_random_nature_image()
         image_path = os.path.join('static', 'bible_verse_image', 'random_nature_image.jpg')
