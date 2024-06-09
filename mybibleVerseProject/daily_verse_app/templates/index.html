@@ -1,0 +1,7 @@
+{% extends "base.html" %} {% load static %} {% block content %}
+<h1>Your Generated Image</h1>
+<form action="{% url 'generate_image' %}" method="POST">
+  {% csrf_token %}
+  <button type="submit" class="btn btn-primary p-2"> Generate Image </button>
+</form>
+{% endblock content %}

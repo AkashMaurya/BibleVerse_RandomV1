@@ -1,0 +1,11 @@
+{% extends "base.html" %} {% load static %}{% block content %}
+<h1 class="text-center">This is Image Genration Class</h1>
+
+<h1>Your Generated Image</h1>
+<img src="{% static generated_image_path %}" alt="Generated Image" />
+<br />
+<form action="{% url 'download_image' %}" method="get">
+  <button type="submit" class="btn btn-primary p-2">Download Image</button>
+</form>
+<br />
+{% endblock content %}
